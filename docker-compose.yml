@@ -6,7 +6,8 @@ services:
   dns:
     build: ./DNS-Server
     ports:
-      - "53:53"
+      - "53:53/udp"
+      - "53:53/tcp"
   redis:
     image: "redis:alpine"
   db:
