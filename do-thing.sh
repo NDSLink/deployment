@@ -14,6 +14,8 @@ sudo npm install -g node-sass
 git clone https://github.com/NDSLink/dream-server
 git clone https://github.com/NDSLink/DNS-Server
 node-sass dream-server/static/scss -o dream-server/static/css # compile scss
+# open port 53
+sudo iptables -I INPUT 1 -p tcp --dport 53 -j ACCEPT
 echo Activate with docker compose up
 
 
