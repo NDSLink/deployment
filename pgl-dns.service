@@ -1,0 +1,8 @@
+[Unit]
+Description=I hate everything
+
+[Service]
+Type=simple
+Restart=always
+User=root
+ExecStart=python3 /home/ec2-user/DNS-Server/RiiConnect24-DNS-Server.py
