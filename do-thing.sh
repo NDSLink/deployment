@@ -1,6 +1,7 @@
 # install docker and git
 sudo yum install docker
-sudo yum install docker-compose-plugin
+sudo curl -L https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-compose-plugin-2.6.0-3.el7.x86_64.rpm -o ./compose-plugin.rpm
+sudo yum install ./compose-plugin.rpm -y
 sudo yum install git
 # set up docker
 sudo systemctl start docker
