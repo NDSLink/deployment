@@ -3,6 +3,8 @@ services:
     build: ./dream-server
     ports:
       - "80:80"
+    depends_on:
+      - "db"
   dns:
     build: ./DNS-Server
     ports:
