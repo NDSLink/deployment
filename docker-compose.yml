@@ -1,10 +1,4 @@
 services:
-  web:
-    build: ./dream-server
-    ports:
-      - "80:80"
-    depends_on:
-      - "db"
   dns:
     build: ./DNS-Server
     ports:
@@ -26,6 +20,12 @@ services:
       - db:/var/lib/postgresql/data
     secrets:
       - db_password
+  web:
+    build: ./dream-server
+    ports:
+      - "80:80"
+    depends_on:
+      - db
 volumes:
     db:
       driver: local
