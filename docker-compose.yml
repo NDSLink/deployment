@@ -10,6 +10,8 @@ services:
       - "53:53/tcp"
   redis:
     image: "redis:alpine"
+    ports:
+      - "6379:6379"
   db:
     image: postgres:alpine
     restart: always
