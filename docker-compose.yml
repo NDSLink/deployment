@@ -26,8 +26,12 @@ services:
       - "80:80"
     depends_on:
       - db
+    volumes:
+      - saves:/saves
 volumes:
     db:
+      driver: local
+    saves:
       driver: local
 secrets:
     db_password:
